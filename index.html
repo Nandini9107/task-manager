@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Login Page -->
+  <div class="login-container" id="loginPage">
+    <h1>Task Manager</h1>
+
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button onclick="login()">Login</button>
+
+    <p class="hint">
+      Use:<br>
+      admin@gmail.com <br>
+      1234
+    </p>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="dashboard hidden" id="dashboard">
+
+    <div class="top-bar">
+      <h1>My Tasks</h1>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="task-form">
+      <input type="text" id="taskInput" placeholder="Enter task">
+
+      <select id="statusInput">
+        <option>Pending</option>
+        <option>Completed</option>
+      </select>
+
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div id="taskList" class="task-list"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.hidden{
+  display:none;
+}
+
+.login-container,
+.dashboard{
+  width:100%;
+  max-width:750px;
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:25px;
+  padding:30px;
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.2);
+  color:white;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:25px;
+  font-size:2.2rem;
+  font-weight:600;
+}
+
+input,
+select{
+  width:100%;
+  padding:14px;
+  margin-top:15px;
+  border:none;
+  outline:none;
+  border-radius:12px;
+  background:rgba(255,255,255,0.2);
+  color:white;
+  font-size:15px;
+}
+
+input::placeholder{
+  color:#eee;
+}
+
+select{
+  color:white;
+}
+
+option{
+  color:black;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  margin-top:18px;
+  border:none;
+  border-radius:12px;
+  background:white;
+  color:#5b4b8a;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+button:hover{
+  transform:translateY(-2px);
+  background:#f1f1f1;
+}
+
+.top-bar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+  gap:15px;
+}
+
+.top-bar h1{
+  margin:0;
+  text-align:left;
+}
+
+.task-form{
+  margin-bottom:25px;
+}
+
+.task-list{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.task{
+  padding:20px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.15);
+  transition:0.3s;
+}
+
+.task:hover{
+  transform:scale(1.01);
+}
+
+.task h3{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.task p{
+  opacity:0.9;
+}
+
+.task-buttons{
+  display:flex;
+  gap:10px;
+  margin-top:15px;
+}
+
+.task-buttons button{
+  margin-top:0;
+}
+
+.completed{
+  border-left:6px solid #00ff99;
+}
+
+.pending{
+  border-left:6px solid #ff5e7a;
+}
+
+.hint{
+  margin-top:20px;
+  text-align:center;
+  line-height:1.8;
+  color:#eee;
+  font-size:14px;
+}
+
+@media(max-width:700px){
+
+  .login-container,
+  .dashboard{
+    padding:22px;
+  }
+
+  h1{
+    font-size:1.8rem;
+  }
+
+  .top-bar{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .task-buttons{
+    flex-direction:column;
+  }
+}
